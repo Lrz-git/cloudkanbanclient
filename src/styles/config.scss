@@ -1,0 +1,22 @@
+// 后台框架尺寸
+// 左侧菜单导航宽度
+$navMenu: 15.625rem;
+$navMenuMin: 4rem;
+$headerHeight: 6.25rem;
+//操作区高度
+$operationAreaHeight:2rem+0.48rem;
+
+
+//操作区按钮组颜色
+$btnColor:rgba(16, 133, 229, 1);
+
+//定义混入
+@mixin webkit($type, $value) {
+    -webkit-#{$type}: $value;
+    -moz-#{$type}: $value;
+    -o-#{$type}: $value;
+    -ms-#{$type}: $value;
+    #{$type}: $value;
+}
+//使用混入
+//@include webkit(transition, all 0.2s ease 0s);

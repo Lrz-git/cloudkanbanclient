@@ -1,0 +1,65 @@
+/** iPad **/
+@media only screen and(orientation:portrait) and (min-width: 768px) and (max-width: 1023px) {}
+
+/** iPhone **/
+@media only screen and(orientation:portrait) and (min-width: 320px) and (max-width: 767px) {
+
+    #main-wrap {
+        position: fixed;
+        top: 2.6rem;
+        left: 2.5rem;
+        right: 0rem;
+        bottom: 0rem;
+        background-color: white;
+        //   border: 1.25rem solid #f7f7f7;
+        @include webkit(box-shadow, 0 1rem 1rem 0px rgba(0, 0, 0, 0.6));
+        border-bottom: none;
+        @include webkit(transition, all 0.2s ease 0s);
+        @include webkit(box-sizing, border);
+        padding: 1.25rem 1.25rem;
+    }
+
+    .open {
+        #main-wrap {
+            left: 2.5rem;
+        }
+    }
+
+    .close {
+        #main-wrap {
+            left: 2.5rem;
+        }
+    }
+
+
+}
+
+/*横屏*/
+@media only screen and (orientation:landscape) and (min-height: 320px) and (max-height: 500px) {
+    #main-wrap {
+        position: fixed;
+        top: 3.625rem;
+        left: $navMenu;
+        right: 0rem;
+        bottom: 0rem;
+        background-color: white;
+        //   border: 1.25rem solid #f7f7f7;
+        @include webkit(box-shadow, 0 1rem 1rem 0px rgba(0, 0, 0, 0.6));
+        border-bottom: none;
+        @include webkit(transition, all 0.2s ease 0s);
+        @include webkit(box-sizing, border);
+        padding: 0.25rem 1.25rem;
+    }
+
+    .open {
+        #main-wrap {
+            left: $navMenu;
+        }
+    }
+
+    .close {
+        #main-wrap {
+            left: $navMenuMin;
+        }
+    }
+}

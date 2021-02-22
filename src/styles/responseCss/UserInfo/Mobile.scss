@@ -1,0 +1,494 @@
+/** iPhone **/
+@media only screen and (min-width: 320px) and (max-width: 767px) {
+    // .bigbox {
+    //     height: 100%;
+    // }
+
+    .OperatingArea {
+        height: auto;
+        display: flex;
+        margin-bottom: 0rem;
+        width: 100%;
+        flex-direction: column;
+    }
+
+    /**我的按钮组**/
+
+    .changeArea {
+        // display: flex;
+        width: 100%;
+        margin-bottom: 1rem;
+        width: 100%;
+    }
+
+    .buttomGroup {
+        margin: 0;
+        border-radius: 0;
+        background-color: transparent;
+        color: black;
+        border: 0.12rem solid $btnColor;
+        border-top: 0.24rem solid $btnColor;
+        border-bottom: 0.24rem solid $btnColor;
+        height: 2rem;
+        line-height: 2rem + 0.24rem;
+        padding: 0rem .5rem;
+        cursor: pointer;
+        @include webkit(transition, all 0.2s ease 0s);
+        width: 33.333%;
+        font-size: .8rem;
+        text-align: center;
+    }
+
+    .buttomGroup:nth-child(3) {
+        border-right: 0.24rem solid $btnColor;
+    }
+
+    .buttomGroup:nth-child(1) {
+        border-left: 0.24rem solid $btnColor;
+    }
+
+    .buttomGroup:hover {
+        background-color: $btnColor !important;
+        color: White;
+        font-weight: bold;
+        padding: 0rem .5rem;
+
+    }
+
+    .buttomGroup:active {
+        font-weight: bold;
+        // font-size: 0.9rem + 0.08rem;
+        @include webkit(transform, rotate(10deg));
+    }
+
+
+    //修改下拉框,和文本框
+    .searchArea {
+        // display: inline;
+        display: flex;
+        // flex-direction: column;
+        height: auto;
+        justify-content: space-between;
+        margin-bottom: 1rem;
+
+    }
+
+
+    .group_like {
+        // margin-left: 2rem;
+        width: 12.5rem;
+    }
+
+    .like_name {
+        width: 7rem;
+        padding-right: 0rem;
+    }
+
+    .el-input__inner {
+        border: none;
+        border-bottom: .24rem solid $btnColor;
+        border-radius: 0;
+        font-size: 0.5rem !important;
+        height: $operationAreaHeight - .24rem;
+        line-height: $operationAreaHeight - .24rem;
+    }
+
+    .el-input__inner:hover {
+        border-color: $btnColor !important;
+    }
+
+    //修改el-button
+
+    // .searchArea:last-child {
+    //     // display: inline;
+    //     display: flex;
+    //     justify-content: space-between;
+    //     height: auto;
+    //     margin-bottom: 1.5rem;
+    // }
+
+    .el-button:hover {
+        padding: 12px 0rem;
+    }
+
+    .el-button {
+        padding: 12px 0rem;
+        margin-left: 0rem;
+        border-radius: 0;
+        width: 33%;
+        font-size: .8rem;
+    }
+
+
+    .el-button:active {
+        @include webkit(transform, rotate(10deg));
+    }
+}
+
+/*iPhone横屏*/
+@media only screen and (orientation:landscape) and (min-height: 320px) and (max-height: 500px) {
+    .OperatingArea {
+        height: auto;
+        display: flex;
+        margin-bottom: 0rem;
+        width: 100%;
+        flex-direction: column;
+    }
+
+    /**我的按钮组**/
+
+    .changeArea {
+        // display: flex;
+        width: 100%;
+        margin-bottom: 1rem;
+        width: 100%;
+    }
+
+    .buttomGroup {
+        margin: 0;
+        border-radius: 0;
+        background-color: transparent;
+        color: black;
+        border: 0.12rem solid $btnColor;
+        border-top: 0.24rem solid $btnColor;
+        border-bottom: 0.24rem solid $btnColor;
+        height: 2.2rem !important;
+        line-height: 2.2rem + 0.24rem !important;
+        padding: 0rem .5rem;
+        cursor: pointer;
+        @include webkit(transition, all 0.2s ease 0s);
+        width: 33.333%;
+        font-size: .6rem !important;
+        text-align: center;
+    }
+
+    .buttomGroup:nth-child(3) {
+        border-right: 0.24rem solid $btnColor;
+    }
+
+    .buttomGroup:nth-child(1) {
+        border-left: 0.24rem solid $btnColor;
+    }
+
+    .buttomGroup:hover {
+        background-color: $btnColor !important;
+        color: White;
+        font-weight: bold;
+        padding: 0rem .5rem;
+
+    }
+
+    .buttomGroup:active {
+        font-weight: bold;
+        // font-size: 0.9rem + 0.08rem;
+        @include webkit(transform, rotate(10deg));
+    }
+
+
+    //修改下拉框,和文本框
+    .searchArea {
+        // display: inline;
+        display: flex;
+        // flex-direction: column;
+        height: auto;
+        justify-content: space-between;
+        margin-bottom: .5rem !important;
+
+    }
+
+
+    .group_like {
+        // margin-left: 2rem;
+        width: 45%;
+    }
+
+    .like_name {
+        width: 45%;
+        padding-right: 0rem;
+    }
+
+    .el-input__inner {
+        border: none;
+        border-bottom: .24rem solid $btnColor;
+        border-radius: 0;
+        font-size: 0.5rem !important;
+        height: $operationAreaHeight - .24rem;
+        line-height: $operationAreaHeight - .24rem;
+    }
+
+    .el-input__inner:hover {
+        border-color: $btnColor !important;
+    }
+
+    //修改el-button
+    .el-button:hover {
+        padding: 12px 0rem;
+        // border: 2px #3C5B9A solid;
+        // opacity: .9;
+    }
+
+    .el-button {
+        padding: 12px 0rem;
+        margin-left: 0rem;
+        border-radius: 0;
+        width: 33%;
+        font-size: .8rem;
+    }
+
+
+    .el-button:active {
+        @include webkit(transform, rotate(10deg));
+    }
+}
+
+
+/** iPad **/
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+
+    .OperatingArea {
+        height: auto;
+        display: flex;
+        margin-bottom: 0rem;
+        width: 100%;
+        flex-direction: column;
+    }
+
+    /**我的按钮组**/
+
+    .changeArea {
+        // display: flex;
+        width: 100%;
+        margin-bottom: 1rem;
+        width: 100%;
+    }
+
+    .buttomGroup {
+        margin: 0;
+        border-radius: 0;
+        background-color: transparent;
+        color: black;
+        border: 0.12rem solid $btnColor;
+        border-top: 0.24rem solid $btnColor;
+        border-bottom: 0.24rem solid $btnColor;
+        height: 2rem;
+        line-height: 2rem + 0.24rem;
+        padding: 0rem .5rem;
+        cursor: pointer;
+        @include webkit(transition, all 0.2s ease 0s);
+        width: 33.333%;
+        font-size: .8rem;
+        text-align: center;
+    }
+
+    .buttomGroup:nth-child(3) {
+        border-right: 0.24rem solid $btnColor;
+    }
+
+    .buttomGroup:nth-child(1) {
+        border-left: 0.24rem solid $btnColor;
+    }
+
+    .buttomGroup:hover {
+        background-color: $btnColor !important;
+        color: White;
+        font-weight: bold;
+        padding: 0rem .5rem;
+
+    }
+
+    .buttomGroup:active {
+        font-weight: bold;
+        // font-size: 0.9rem + 0.08rem;
+        @include webkit(transform, rotate(10deg));
+    }
+
+
+    //修改下拉框,和文本框
+    .searchArea {
+        // display: inline;
+        display: flex;
+        // flex-direction: column;
+        height: auto;
+        justify-content: space-between;
+        margin-bottom: 1rem;
+    }
+
+
+    .group_like {
+        // margin-left: 2rem;
+        width: 45%;
+    }
+
+    .like_name {
+        width: 45%;
+        padding-right: 0rem;
+    }
+
+    .el-input__inner {
+        border: none;
+        border-bottom: .24rem solid $btnColor;
+        border-radius: 0;
+        font-size: 0.5rem !important;
+        height: $operationAreaHeight - .24rem;
+        line-height: $operationAreaHeight - .24rem;
+    }
+
+    .el-input__inner:hover {
+        border-color: $btnColor !important;
+    }
+
+    //修改el-button
+
+    // .searchArea:last-child {
+    //     // display: inline;
+    //     display: flex;
+    //     justify-content: space-between;
+    //     height: auto;
+    //     margin-bottom: 1.5rem;
+    // }
+
+    .el-button:hover {
+        padding: 12px 0rem;
+        // border: 2px #3C5B9A solid;
+        // opacity: .9;
+    }
+
+    .el-button {
+        padding: 12px 0rem;
+        margin-left: 0rem;
+        border-radius: 0;
+        width: 33%;
+        font-size: .8rem;
+    }
+
+    .el-button:active {
+        @include webkit(transform, rotate(10deg));
+    }
+}
+
+/** iPad,iPadPro 横屏**/
+@media only screen and (orientation:landscape) and (min-width: 768px) and (max-width: 1366px) {}
+
+/* 低分辨率笔记本和Ipad Pro */
+@media only screen and (min-width: 1024px) and (max-width: 1366px) {
+
+    .OperatingArea {
+        height: auto;
+        display: flex;
+        margin-bottom: 0rem;
+        width: 100%;
+        flex-direction: column;
+    }
+
+    /**我的按钮组**/
+
+    .changeArea {
+        // display: flex;
+        width: 100%;
+        margin-bottom: 1rem;
+        width: 100%;
+    }
+
+    .buttomGroup {
+        margin: 0;
+        border-radius: 0;
+        background-color: transparent;
+        color: black;
+        border: 0.12rem solid $btnColor;
+        border-top: 0.24rem solid $btnColor;
+        border-bottom: 0.24rem solid $btnColor;
+        height: 2rem;
+        line-height: 2rem + 0.24rem;
+        padding: 0rem .5rem;
+        cursor: pointer;
+        @include webkit(transition, all 0.2s ease 0s);
+        width: 33.333%;
+        font-size: .8rem;
+        text-align: center;
+    }
+
+    .buttomGroup:nth-child(3) {
+        border-right: 0.24rem solid $btnColor;
+    }
+
+    .buttomGroup:nth-child(1) {
+        border-left: 0.24rem solid $btnColor;
+    }
+
+    .buttomGroup:hover {
+        background-color: $btnColor !important;
+        color: White;
+        font-weight: bold;
+        padding: 0rem .5rem;
+
+    }
+
+    .buttomGroup:active {
+        font-weight: bold;
+        // font-size: 0.9rem + 0.08rem;
+        @include webkit(transform, rotate(10deg));
+    }
+
+
+    //修改下拉框,和文本框
+    .searchArea {
+        // display: inline;
+        display: flex;
+        // flex-direction: column;
+        height: auto;
+        justify-content: space-between;
+        margin-bottom: 1rem;
+    }
+
+
+    .group_like {
+        // margin-left: 2rem;
+        width: 45%;
+    }
+
+    .like_name {
+        width: 45%;
+        padding-right: 0rem;
+    }
+
+    .el-input__inner {
+        border: none;
+        border-bottom: .24rem solid $btnColor;
+        border-radius: 0;
+        font-size: 0.5rem !important;
+        height: $operationAreaHeight - .24rem;
+        line-height: $operationAreaHeight - .24rem;
+    }
+
+    .el-input__inner:hover {
+        border-color: $btnColor !important;
+    }
+
+    //修改el-button
+
+    // .searchArea:last-child {
+    //     // display: inline;
+    //     display: flex;
+    //     justify-content: space-between;
+    //     height: auto;
+    //     margin-bottom: 1.5rem;
+    // }
+
+    .el-button:hover {
+        padding: 12px 0rem;
+        // border: 2px #3C5B9A solid;
+        // opacity: .9;
+    }
+
+    .el-button {
+        padding: 12px 0rem;
+        margin-left: 0rem;
+        border-radius: 0;
+        width: 33%;
+        font-size: .8rem;
+    }
+
+    .el-button:active {
+        @include webkit(transform, rotate(10deg));
+    }
+}

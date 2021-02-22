@@ -1,0 +1,56 @@
+/** iPad **/
+@media only screen and(orientation:portrait) and (min-width: 768px) and (max-width: 1023px) {}
+
+/** iPhone **/
+@media only screen and(orientation:portrait) and (min-width: 320px) and (max-width: 767px) {
+    #nav-wrap {
+        width: 2.5rem;
+    }
+
+    //layout的class为open时
+    .open {
+        #nav-wrap {
+            width: 2.5rem;
+
+            .el-menu-vertical-demo {
+                width: 2.5rem;
+            }
+        }
+    }
+
+    //layout的class为close时
+    .close {
+        #nav-wrap {
+            width: 2.5rem;
+
+            .el-menu-vertical-demo {
+                width: 2.5rem;
+            }
+        }
+    }
+
+    .el-menu-vertical-demo {
+        width: 2.5rem;
+        padding: 0;
+        padding-left: 0px;
+
+        // text-align: center;
+        // display: flex;
+        // flex-direction: column;
+        // align-items: center;
+        li {
+            padding-left: 0px;
+
+        }
+    }
+
+    .el-submenu__title {
+        padding: 0;
+        width: 2.5rem;
+        padding-left: 0px !important;
+        text-align: center;
+    }
+}
+
+/*横屏*/
+@media only screen and (orientation:landscape) and (min-width: 320px) and (max-width: 767px) {}

@@ -1,0 +1,1 @@
+export const tabsBMD = [{ path: "/login" }, { path: "/Login" }, { path: "/layout" }]

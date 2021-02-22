@@ -1,0 +1,485 @@
+//修改el-button
+.el-button:hover {
+    padding: 12px 1.8rem;
+}
+
+.el-button--small:hover {
+    padding: 9px 15px !important;
+}
+
+.el-button--mini:hover {
+    padding: 7px 15px !important;
+}
+
+.el-button--text:hover {
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+}
+
+.el-button {
+    margin-left: 1.5rem;
+    border-radius: 0;
+}
+
+.el-button:active {
+    @include webkit(transform, rotate(10deg));
+}
+
+/*隐藏输入框 type=number时，右侧的上下箭头*/
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
+input[type="number"] {
+    -moz-appearance: textfield;
+}
+
+/**我的按钮组**/
+.buttomGroup {
+    margin: 0;
+    border-radius: 0;
+    background-color: transparent;
+    color: black;
+    border: 0.12rem solid $btnColor;
+    border-top: 0.24rem solid $btnColor;
+    border-bottom: 0.24rem solid $btnColor;
+    height: $operationAreaHeight -0.48rem;
+    line-height: $operationAreaHeight - 0.48rem;
+    padding: 0rem 1rem;
+    cursor: pointer;
+    @include webkit(transition, all 0.2s ease 0s);
+}
+
+// 第三个按钮被气泡包裹了 
+.buttomGroup:nth-child(3) {
+    border-right: 0.24rem solid $btnColor !important;
+}
+
+// .btnRightBorder {
+//     border-right: 0.24rem solid $btnColor;
+//     border-left: 0.12rem solid $btnColor !important;
+// }
+
+
+.buttomGroup:nth-child(1) {
+    border-left: 0.24rem solid $btnColor;
+}
+
+.buttomGroup:hover {
+    background-color: $btnColor !important;
+    color: White;
+    font-weight: bold;
+    padding: 0rem 2rem;
+}
+
+.buttomGroup:active {
+    font-weight: bold;
+    // font-size: 0.9rem + 0.08rem;
+    @include webkit(transform, rotate(10deg));
+}
+
+
+.changeArea {
+    display: flex;
+    width: 360px;
+}
+
+//修改下拉框,和文本框
+.el-input__inner {
+    border: none;
+    border-bottom: .24rem solid $btnColor;
+    border-radius: 0;
+    font-size: 1rem;
+    height: $operationAreaHeight; //- .24rem
+    line-height: $operationAreaHeight; //- .24rem
+
+}
+
+.el-input__inner:hover {
+    border-color: $btnColor !important;
+}
+
+//时间选择器后面加删除
+// .TimeItem .el-form-item__label::after {
+//     content: "删除";
+//     font-family: element-icons !important;
+//     cursor: pointer;
+//     margin-left: 5px;
+//     font-size: .8rem;
+//     color: red;
+// }
+
+
+//计数器文本框的边框去除
+.inputNumber .el-input .el-input__inner {
+    border-bottom: none !important;
+    height: 2.7rem !important;
+}
+
+//计数器文本框的加号减号边框修复
+.el-input-number__decrease {
+    border: 1px solid #DCDFE6;
+
+}
+
+.el-input-number__increase {
+    border: 1px solid #DCDFE6;
+}
+
+/*低分辨率笔记本*/
+@media only screen and (min-width: 1024px) and (max-width: 1366px) {}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// 修改elementUI
+
+//导航栏二级菜单
+.el-submenu .el-menu-item {
+    font-size: 16px;
+    font-weight: bold;
+
+    //   font-weight: bold;
+    &.is-active {
+        //   background-color: rgba(234, 236, 244, 0.6) !important;
+        font-weight: bold;
+    }
+}
+
+// 修改一级菜单选中样式
+.is-opened .el-submenu__title {
+    //   background-color: #f56c6c !important;
+    font-weight: bold;
+    font-size: 18px;
+
+    .MenuName {
+        color: white;
+    }
+}
+
+// .el-menu-item:hover {
+//     background: transparent !important;
+// }
+
+.el-submenu__title:hover {
+    background: transparent !important;
+    color: white !important;
+}
+
+.el-submenu__title i {
+    color: white;
+}
+
+.el-tabs--bottom .el-tabs__header.is-bottom {
+    margin-top: 2px !important;
+}
+
+.is-bottom {
+    border-radius: 10px 10px 0px 0px;
+}
+
+.el-tabs__item {
+    margin-right: 10px;
+    border: 2px solid #3C5B9A;
+}
+
+.is-bottom.is-active {
+    background-color: #3C5B9A;
+    color: white;
+    font-weight: bold;
+}
+
+.el-tabs--card>.el-tabs__header .el-tabs__nav {
+    border: 0px solid #E4E7ED;
+    border-bottom: none;
+    border-radius: 10px 10px 0 0;
+    box-sizing: border-box;
+}
+
+.el-tabs--card>.el-tabs__header .el-tabs__item {
+    border-bottom: 0px solid transparent;
+    border-left: 2px solid #3C5B9A;
+    transition: color .3s cubic-bezier(.645, .045, .355, 1), padding .3s cubic-bezier(.645, .045, .355, 1);
+}
+
+.el-tabs--card>.el-tabs__header .el-tabs__item:first-child {
+    border-left: 2px solid #3C5B9A;
+}
+
+//修改表格
+.el-table__body tr>td {
+    cursor: pointer;
+}
+
+.el-table__body tr:hover>td {
+    background: #e6e6e6 !important;
+    // color: white;
+    font-size: 1rem;
+    // color: white;
+}
+
+.el-table--enable-row-transition .el-table__body td {
+    transition: font-size .3s ease !important;
+}
+
+.el-table__body tr.current-row>td {
+    background: rgba($color: #409Ecf, $alpha: 1) !important;
+    color: white;
+    font-size: 1rem;
+}
+
+//可展开表格的展开项内边距重写
+.el-table__expanded-cell[class*="cell"] {
+    padding: 15px 0px 15px 60px;
+}
+
+
+
+//手风琴的表格去除线
+.el-collapse-item__content .el-table__row>td {
+    border: none !important;
+}
+
+// //计划手风琴内悬浮样式
+// .el-collapse-item__content .el-table__body tr:hover>td {
+//     background: rgba($color:#67C23A, $alpha: .8) !important;
+//     font-size: 1rem;
+//     color: white;
+// }
+
+// //计划手风琴 表头
+// .el-collapse-item__content .el-table th {
+//     background-color: rgba($color:#409ECF, $alpha: 1);
+//     // color: white;
+//     font-weight: bold;
+//     border-bottom: none;
+// }
+
+// //计划手风琴内选中样式
+// .el-collapse-item__content .el-table__body tr.current-row>td {
+//     background-color: transparent !important;
+//     color: white;
+//     font-size: 1rem !important;
+// }
+
+
+
+//权限手风琴 表头
+.accordionLrz .el-table th {
+    background-color: rgba($color:#4F6BA8, $alpha: 1);
+    color: white;
+    font-weight: bold;
+    border-bottom: none;
+}
+
+//权限手风琴内选中样式
+.accordionLrz .el-table__body tr.current-row>td {
+    background-color: transparent !important;
+    font-size: 14px;
+    color: #409EFF;
+}
+
+
+//权限手风琴内表格悬浮鼠标
+.accordionLrz .el-table__body tr:hover>td {
+    background: transparent !important;
+    font-size: 14px;
+    color: #409EFF;
+}
+
+//手风琴箭头颜色
+.el-collapse-item__arrow {
+    margin: 0 2rem 0 auto;
+    transition: transform .3s;
+    font-weight: bold;
+    color: rgb(64, 158, 255);
+    font-size: 1rem;
+}
+
+//滚动条
+::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+}
+
+/* 滚动条的滑块 */
+::-webkit-scrollbar-thumb {
+    background-color: #3c5b9a !important;
+    border-radius: 10px;
+}
+
+
+/* 表格滚动条的宽度 */
+.el-table .el-table__body-wrapper::-webkit-scrollbar {
+    width: 3px;
+    height: 10px;
+}
+
+/* 表格滚动条的滑块 */
+.el-table .el-table__body-wrapper::-webkit-scrollbar-thumb {
+    background-color: #e6e6e6 !important;
+    border-radius: 5px;
+}
+
+
+
+
+
+/* 表头背景色 */
+.el-table th {
+    background-color: rgba($color: #3C5B9f, $alpha: .9);
+    color: white;
+    font-weight: bold;
+    border-bottom: none;
+}
+
+.el-table tr {
+    background-color: transparent;
+    @include webkit(transition, all .2s ease 0s);
+}
+
+.el-table th.gutter {
+    display: none;
+}
+
+/** iPhone **/
+// @media only screen and (min-width: 320px) and (max-width: 767px) {
+//     max-height: 60%;
+//     display: flex;
+//     flex-direction: column;
+//     max-width: 35%;
+//     width: 50%;
+// }
+//修改dialog
+// 1. 居中弹框
+.el-dialog {
+    // max-height: 60%;
+    display: flex;
+    flex-direction: column;
+    max-width: 35%;
+    width: 50%;
+    max-height: 70%;
+
+    //iPhone
+    @media only screen and (min-width: 320px) and (max-width: 767px) {
+        width: 90%;
+        max-width: 95%;
+    }
+
+    //横屏
+    // @media only screen and (orientation:landscape) {
+    //     width: 80%;
+    //     max-width: 80%;
+    // }
+
+    //iPad
+    @media only screen and (min-width: 768px) and (max-width: 1023px) {
+        width: 90%;
+        max-width: 95%;
+    }
+
+    //iPadPro和低分辨率笔记本
+    @media only screen and (min-width: 1024px) and (max-width: 1366px) {
+        width: 90%;
+        max-width: 95%;
+    }
+}
+
+
+
+.el-dialog>.el-dialog__body {
+    overflow: auto;
+    padding: 1rem 3rem;
+    border: .3rem rgba(79, 107, 168, 1) solid;
+    border-bottom: none;
+    border-top: none;
+
+    .el-form {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .el-form-item {
+        width: 45%;
+
+        //iPhone
+        @media only screen and (min-width: 320px) and (max-width: 767px) {
+            width: 100%;
+        }
+
+        // //横屏
+        // @media only screen and (orientation:landscape) {
+        //     width: 80%;
+        //     max-width: 80%;
+        // }
+
+        //iPad
+        @media only screen and (min-width: 768px) and (max-width: 1023px) {
+            width: 90%;
+            max-width: 95%;
+        }
+
+        //iPadPro和低分辨率笔记本
+        @media only screen and (min-width: 1024px) and (max-width: 1366px) {
+            width: 90%;
+            max-width: 95%;
+        }
+
+        .el-form-item__label {
+            font-size: 1rem;
+            font-weight: bold;
+        }
+    }
+}
+
+.el-dialog>.el-dialog__body::-webkit-scrollbar {
+    width: 8px;
+    cursor: pointer;
+}
+
+.el-dialog>.el-dialog__body::-webkit-scrollbar-thumb {
+    background-color: #e6e6e6 !important;
+    border-radius: 10px;
+}
+
+.el-dialog__footer {
+    // background-color: rgb(252, 249, 252);
+    background-color: white;
+    border: .3rem rgba(60, 91, 154, 1) solid;
+    border-top: none;
+
+    .el-button.el-button--primary {
+        background-color: rgba(60, 91, 154, 1);
+        border-color: rgba(60, 91, 154, 1);
+    }
+}
+
+.el-dialog__header {
+    background-color: rgba(60, 91, 154, 1);
+    @include webkit(box-shadow, 0 0.125rem .9rem 0px rgba(0, 0, 0, 0.1));
+
+    .el-dialog__title {
+        color: white;
+        font-weight: bold;
+    }
+
+    .el-dialog__headerbtn {
+        i {
+            color: white;
+            font-size: 1.2rem;
+        }
+    }
+}

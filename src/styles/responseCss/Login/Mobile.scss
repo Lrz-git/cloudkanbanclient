@@ -1,0 +1,153 @@
+/** iPad **/
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+    .bigbox {
+        padding: 5rem;
+    }
+}
+
+/** iPhone **/
+@media only screen and (min-width: 320px) and (max-width: 767px) {
+    .bigbox {
+        padding: 1.2rem;
+        padding-top: 10%;
+    }
+
+    .logo {
+        padding-left: 1.25rem;
+        // padding-top: 0.1rem;
+
+        a {
+            color: white;
+            font-size: 1rem;
+            cursor: pointer;
+        }
+    }
+
+    h2 {
+        color: white;
+        text-align: center;
+        font-size: 1.5rem;
+        padding: 1.8rem 0 1rem;
+        // letter-spacing: 0.625rem;
+    }
+
+    h3 {
+        color: white;
+        text-align: center;
+        font-size: 1rem;
+        letter-spacing: 0.1rem;
+        //   padding-bottom: 140px;
+    }
+
+    .signup {
+        width: 18rem;
+        //   height: 340px;
+        margin: auto;
+        background-color: white;
+        position: relative;
+        top: -3.3rem;
+        padding: 1rem;
+        box-shadow: 0px 1.5rem 1.5rem -0.8rem rgba(0, 0, 0, 0.8);
+    }
+
+    .signup input {
+        display: block;
+        width: 100%;
+        border: none;
+        outline: none;
+        border-bottom: 0.13rem solid #999;
+        color: gray;
+        font-size: 1.1rem;
+        border-radius: 0;
+    }
+
+    .signup .field {
+        margin-top: 1.5rem;
+        position: relative;
+    }
+
+    .cut {
+        font-size: .8rem;
+    }
+
+    .remember {
+        display: none;
+    }
+}
+
+/*横屏*/
+@media only screen and (orientation:landscape) and (min-width: 320px) and (max-width: 767px) {
+    .bigbox {
+        padding: 1rem;
+        // padding-top: 5%;
+    }
+
+
+    .main {
+        width: 100%;
+        height: 99%;
+        background-color: #e9eaef;
+        box-shadow: 0 0 1.25rem #143477;
+    }
+
+    .header {
+        display: none;
+    }
+
+    h2 {
+        color: white;
+        text-align: center;
+        font-size: 1.3rem;
+        padding: .2rem 0 .1rem;
+        // letter-spacing: 0.625rem;
+    }
+
+    h3 {
+        color: white;
+        text-align: center;
+        font-size: .9rem;
+        letter-spacing: 0.1rem;
+        //   padding-bottom: 140px;
+    }
+
+
+
+    .signup {
+        width: 18rem;
+        //   height: 340px;
+        margin: auto;
+        background-color: white;
+        position: relative;
+        top: -6.45rem;
+        padding: .8rem 1rem;
+        box-shadow: 0px 1.5rem 1.5rem -0.8rem rgba(0, 0, 0, 0.8);
+
+        h4 {
+            font-size: 1.1rem;
+        }
+    }
+
+    .signup input {
+        display: block;
+        width: 100%;
+        border: none;
+        outline: none;
+        border-bottom: 0.13rem solid #999;
+        color: gray;
+        font-size: 1.1rem;
+        border-radius: 0;
+    }
+
+    .signup .field {
+        margin-top: 1.35rem;
+        position: relative;
+    }
+
+    .cut {
+        font-size: .8rem;
+    }
+
+    .remember {
+        display: none;
+    }
+}
