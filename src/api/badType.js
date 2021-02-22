@@ -2,7 +2,7 @@ import service from '../utils/request.js'
 
 
 
-/*条件查询*/
+/*条件查询AA*/
 export function GetApi (companyId, badTypeName) {
     return service.request({
         method: "GET",
