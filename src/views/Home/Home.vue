@@ -58,8 +58,11 @@
         </div>
         <div class="base">
           <div class="titleFont"><i class="el-icon-sunny"></i> 天气</div>
-          <div class="weatherContent" v-if="weatherRoot.daily">
-            <div class="weatherAddress" >
+          <div
+            class="weatherContent"
+            v-if="weatherRoot.daily"
+          >
+            <div class="weatherAddress">
               <div>
                 <i class="el-icon-location-outline"></i>
                 <span>{{cityName}}</span>
@@ -69,8 +72,11 @@
               </div>
             </div>
 
-            <div class="tempFont" v-if="weatherRoot.daily">
-              <div class="mainTemp" >
+            <div
+              class="tempFont"
+              v-if="weatherRoot.daily"
+            >
+              <div class="mainTemp">
                 <countTo
                   :endVal='parseInt(weatherRoot.daily[0].tempMin)'
                   :duration='2000'
@@ -84,13 +90,24 @@
                 ></countTo>
               </div>
             </div>
-            <div class="myFontCarousel" v-if="livingRoot.daily">
-                              <el-carousel :interval="4000" arrow="never" indicator-position="none" height="55px">
-    <el-carousel-item v-for="(item ,index ) in livingRoot.daily" :key="index">
-      <p>{{item.name+"："+item.text}}</p>
-    </el-carousel-item>
+            <div
+              class="myFontCarousel"
+              v-if="livingRoot.daily"
+            >
+              <el-carousel
+                :interval="4000"
+                arrow="never"
+                indicator-position="none"
+                height="55px"
+              >
+                <el-carousel-item
+                  v-for="(item ,index ) in livingRoot.daily"
+                  :key="index"
+                >
+                  <p>{{item.name+"："+item.text}}</p>
+                </el-carousel-item>
 
-  </el-carousel>
+              </el-carousel>
             </div>
 
           </div>
@@ -134,7 +151,7 @@
 </template>
 
 <script>
-import { GetUpdateInfoApi, GetBaseParamApi,GetSunpnWeather } from '../../api/home.js';
+import { GetUpdateInfoApi, GetBaseParamApi, GetSunpnWeather } from '../../api/home.js';
 
 import countTo from 'vue-count-to';
 
@@ -158,19 +175,19 @@ export default {
         timeLineColor: '',
       },
       PhotoUrl: [],
-      cityName:null,
-      weatherRoot:{},
-      livingRoot:{},
-      baseParam:[
-        {baseParamId: 1, baseParamName: "", baseParamValue: ""},
-        {baseParamId: 1, baseParamName: "", baseParamValue: ""},
-        {baseParamId: 1, baseParamName: "", baseParamValue: ""},
-        {baseParamId: 1, baseParamName: "", baseParamValue: ""},
-        {baseParamId: 1, baseParamName: "", baseParamValue: ""},
-        {baseParamId: 1, baseParamName: "", baseParamValue: ""},
-        {baseParamId: 1, baseParamName: "", baseParamValue: ""},
-        {baseParamId: 1, baseParamName: "", baseParamValue: ""},
-        {baseParamId: 1, baseParamName: "", baseParamValue: ""}
+      cityName: null,
+      weatherRoot: {},
+      livingRoot: {},
+      baseParam: [
+        { baseParamId: 1, baseParamName: "", baseParamValue: "" },
+        { baseParamId: 1, baseParamName: "", baseParamValue: "" },
+        { baseParamId: 1, baseParamName: "", baseParamValue: "" },
+        { baseParamId: 1, baseParamName: "", baseParamValue: "" },
+        { baseParamId: 1, baseParamName: "", baseParamValue: "" },
+        { baseParamId: 1, baseParamName: "", baseParamValue: "" },
+        { baseParamId: 1, baseParamName: "", baseParamValue: "" },
+        { baseParamId: 1, baseParamName: "", baseParamValue: "" },
+        { baseParamId: 1, baseParamName: "", baseParamValue: "" }
       ]
     }
   },
@@ -196,11 +213,12 @@ export default {
           if (res.data.stateCode == '0') {
             //轮播图
             let imgData = JSON.parse(res.data.myData).Table;
+            console.log(res);
             for (let index = 0; index < imgData.length; index++) {
               //this.PhotoUrl.push("http://192.168.0.144:8886/StaticFile/HomePage-CompanySlideshow/" + imgData[index].slideshowUrl)
-              this.PhotoUrl.push("http://www.sunpn-cloud.com:8886/StaticFile/HomePage-CompanySlideshow/" + imgData[index].slideshowUrl)
+              this.PhotoUrl.push("https://www.sunpn-cloud.com:8886/StaticFile/HomePage-CompanySlideshow/" + imgData[index].slideshowUrl)
             }
-            console.log(JSON.parse(res.data.myData).Table1);
+            // console.log(JSON.parse(res.data.myData).Table1);
             this.baseParam = JSON.parse(res.data.myData).Table1;
           }
         })
@@ -214,13 +232,13 @@ export default {
     },
     async GetSunpnWeather () {
       GetSunpnWeather()
-      .then(res =>{
-        if (res.data.stateCode=='0'){
-          this.cityName = res.data.cityName;
-          this.weatherRoot=res.data.weatherRoot;
-          this.livingRoot=res.data.livingRoot;
-        }
-      })
+        .then(res => {
+          if (res.data.stateCode == '0') {
+            this.cityName = res.data.cityName;
+            this.weatherRoot = res.data.weatherRoot;
+            this.livingRoot = res.data.livingRoot;
+          }
+        })
     }
   }
 }
@@ -344,7 +362,7 @@ export default {
           font-size: 2.5rem;
           // font-weight: bold;
           letter-spacing: 1px;
-          margin: .625rem 0;
+          margin: 0.625rem 0;
         }
       }
       p {
@@ -363,9 +381,8 @@ export default {
         margin: 0.6rem 0;
       }
     }
-
   }
- 
+
   .base:nth-child(2) {
     background: linear-gradient(90deg, #6485f6, #8ddebe);
   }

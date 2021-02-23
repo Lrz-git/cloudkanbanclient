@@ -4,7 +4,7 @@ import axios from 'axios'
 const BASEURL = '/devApi';
 //创建axios,赋给变量service
 const service = axios.create({
-    baseURL: 'http://www.sunpn-cloud.com:8886/api',//BASEURL,
+    baseURL: 'https://www.sunpn-cloud.com:8886/api',//BASEURL,
     timeout: 5000
 });
 
